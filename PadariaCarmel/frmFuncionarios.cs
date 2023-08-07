@@ -135,5 +135,18 @@ namespace PadariaCarmel
         {
             limparCampos();
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cadastrado com sucesso!!!",
+                "Mensagem do sistema.",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1);
+
+            desabilitarCampos();
+            btnNovo.Enabled = true;
+            limparCampos();
+        }
     }
 }
