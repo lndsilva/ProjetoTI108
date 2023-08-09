@@ -120,6 +120,7 @@ namespace PadariaCarmel
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnExcluir
             // 
@@ -230,6 +231,7 @@ namespace PadariaCarmel
             this.mskCEP.Name = "mskCEP";
             this.mskCEP.Size = new System.Drawing.Size(91, 26);
             this.mskCEP.TabIndex = 11;
+            this.mskCEP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mskCEP_KeyDown);
             // 
             // lblCEP
             // 

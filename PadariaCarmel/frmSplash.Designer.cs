@@ -79,6 +79,7 @@ namespace PadariaCarmel
             // tmrSplash
             // 
             this.tmrSplash.Enabled = true;
+            this.tmrSplash.Interval = 1000;
             this.tmrSplash.Tick += new System.EventHandler(this.tmrSplash_Tick);
             // 
             // frmSplash

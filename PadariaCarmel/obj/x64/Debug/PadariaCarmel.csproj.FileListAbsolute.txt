@@ -14,3 +14,4 @@ C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\EmpresaABC\Pad
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\EmpresaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.frmMenuPrincipal.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\EmpresaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.frmSobre.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\EmpresaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.frmFuncionarios.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\EmpresaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.frmPesquisarFuncionarios.resources
