@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using MySql.Data.MySqlClient;
 
+
 namespace PadariaCarmel
 {
     public partial class frmFuncionarios : Form
@@ -32,7 +33,7 @@ namespace PadariaCarmel
         {
             InitializeComponent();
             txtNome.Text = nome;
-        }       
+        }
 
         private void frmFuncionarios_Load(object sender, EventArgs e)
         {
@@ -118,6 +119,9 @@ namespace PadariaCarmel
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+
+            cadastrarFuncionarios();
+            
             MessageBox.Show("Cadastrado com sucesso!!!",
                 "Mensagem do sistema.",
                 MessageBoxButtons.OK,
@@ -129,6 +133,32 @@ namespace PadariaCarmel
             limparCampos();
 
         }
+
+        //cadastrar funcionarios
+        public void cadastrarFuncionarios()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "insert into tbFuncionarios(nome,email,telCel,cpf,endereco,numero,bairro,cidade,estado,cep)values(@nome,@email,@telCel,@cpf,@endereco,@numero,@bairro,@cidade,@estado,@cep);";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nome", MySqlDbType.VarChar, 100).Value = txtNome.Text;
+            comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = txtEmail.Text;
+            comm.Parameters.Add("@telCel", MySqlDbType.VarChar, 15).Value = mskTel.Text;
+            comm.Parameters.Add("@cpf", MySqlDbType.VarChar, 14).Value = mskCPF.Text;
+            comm.Parameters.Add("@endereco", MySqlDbType.VarChar, 100).Value = txtEnd.Text;
+            comm.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = txtNumero.Text;
+            comm.Parameters.Add("@bairro", MySqlDbType.VarChar, 100).Value = txtBairro.Text;
+            comm.Parameters.Add("@cidade", MySqlDbType.VarChar, 100).Value = txtCidade.Text;
+            comm.Parameters.Add("@estado", MySqlDbType.VarChar, 2).Value = cbbEstado.Text;
+            comm.Parameters.Add("@cep", MySqlDbType.VarChar, 9).Value = mskCEP.Text;
+
+            comm.Connection = Conectar.obterConexao();
+            int res = comm.ExecuteNonQuery();
+            Conectar.fecharConexao();
+
+        }
+
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
