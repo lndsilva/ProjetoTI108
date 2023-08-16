@@ -47,6 +47,7 @@ namespace PadariaCarmel
         private void btnNovo_Click(object sender, EventArgs e)
         {
             habilitarCampos();
+            pesquisarCodigo();
         }
 
         //desabilitar campos
@@ -107,6 +108,7 @@ namespace PadariaCarmel
             txtBairro.Clear();
             txtCidade.Clear();
             txtEmail.Clear();
+            txtCodigo.Clear();
 
             mskCEP.Clear();
             mskCPF.Clear();
@@ -119,18 +121,29 @@ namespace PadariaCarmel
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            if (txtNome.Text.Equals("") || txtEmail.Text.Equals("") || txtEnd.Text.Equals("")
+               || txtNumero.Text.Equals("") || txtBairro.Text.Equals("") || txtCidade.Text.Equals("")
+               || mskCPF.Text.Equals("   .   .   -") || mskTel.Text.Equals("(  )      -")
+               || mskCEP.Text.Equals("     -") || cbbEstado.Text.Equals(""))
+            {
+                MessageBox.Show("Não é permitido campo vazio", "Mensagem do Sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNome.Focus();
+            }
+            else
+            {
+                cadastrarFuncionarios();
 
-            cadastrarFuncionarios();
-            
-            MessageBox.Show("Cadastrado com sucesso!!!",
-                "Mensagem do sistema.",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information,
-                MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Cadastrado com sucesso!!!",
+                    "Mensagem do sistema.",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information,
+                    MessageBoxDefaultButton.Button1);
 
-            desabilitarCampos();
-            btnNovo.Enabled = true;
-            limparCampos();
+                desabilitarCampos();
+                btnNovo.Enabled = true;
+                limparCampos();
+            }
 
         }
 
@@ -159,6 +172,23 @@ namespace PadariaCarmel
 
         }
 
+        //pesquisar por código
+        public void pesquisarCodigo()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select codfunc+1 from tbfuncionarios order by codfunc desc;";
+            comm.CommandType = CommandType.Text;
+            comm.Connection = Conectar.obterConexao();
+
+            MySqlDataReader DR;
+
+            DR = comm.ExecuteReader();
+            DR.Read();
+
+            txtCodigo.Text = DR.GetInt32(0).ToString();
+
+            Conectar.fecharConexao();            
+        }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
