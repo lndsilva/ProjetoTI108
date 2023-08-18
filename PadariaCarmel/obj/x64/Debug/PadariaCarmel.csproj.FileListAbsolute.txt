@@ -15,10 +15,6 @@ C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\EmpresaABC\Pad
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\EmpresaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.frmSobre.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\EmpresaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.frmFuncionarios.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\EmpresaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.frmPesquisarFuncionarios.resources
-C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\bin\x64\Debug\PadariaCarmel.exe.config
-C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\bin\x64\Debug\PadariaCarmel.exe
-C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\bin\x64\Debug\PadariaCarmel.pdb
-C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\obj\x64\Debug\PadariaCarmel.csproj.AssemblyReference.cache
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\obj\x64\Debug\PadariaCarmel.frmCalcula.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\obj\x64\Debug\PadariaCarmel.frmComponentes.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\obj\x64\Debug\PadariaCarmel.frmFuncionarios.resources
@@ -30,8 +26,9 @@ C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\obj\x64\Debug\PadariaCarmel.Properties.Resources.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\obj\x64\Debug\PadariaCarmel.csproj.GenerateResource.cache
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\obj\x64\Debug\PadariaCarmel.csproj.CoreCompileInputs.cache
-C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\obj\x64\Debug\PadariaCarmel.exe
-C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\obj\x64\Debug\PadariaCarmel.pdb
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\bin\x64\Debug\PadariaCarmel.exe.config
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\bin\x64\Debug\PadariaCarmel.exe
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\bin\x64\Debug\PadariaCarmel.pdb
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\bin\x64\Debug\BouncyCastle.Crypto.dll
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\bin\x64\Debug\Google.Protobuf.dll
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\bin\x64\Debug\K4os.Compression.LZ4.dll
@@ -55,3 +52,6 @@ C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\bin\x64\Debug\System.Numerics.Vectors.xml
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\obj\x64\Debug\PadariaCarmel.csproj.CopyComplete
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\obj\x64\Debug\PadariaCarmel.exe
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\obj\x64\Debug\PadariaCarmel.pdb
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\ProjetoTI108\PadariaCarmel\obj\x64\Debug\PadariaCarmel.csproj.AssemblyReference.cache

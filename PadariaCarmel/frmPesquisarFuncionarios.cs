@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace PadariaCarmel
 {
@@ -37,17 +38,14 @@ namespace PadariaCarmel
             {
                 txtDescricao.Focus();
                 lstPesquisar.Items.Clear();
-                lstPesquisar.Items.Add(txtDescricao.Text);
-            
-
-
+                pesquisarCodigo(txtDescricao.Text);
             }
             if (rdbNome.Checked)
             {
                 txtDescricao.Focus();
                 lstPesquisar.Items.Clear();
-                lstPesquisar.Items.Add(txtDescricao.Text);
-              
+                pesquisarNome(txtDescricao.Text);
+
             }
         }
         public void limparCampos()
@@ -80,6 +78,40 @@ namespace PadariaCarmel
             frmFuncionarios abrir = new frmFuncionarios(nome);
             abrir.Show();
             this.Hide();
+        }
+
+        //pesquisar por código
+        public void pesquisarCodigo(string codigo)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select nome from tbFuncionarios where codFunc = " + codigo + ";";
+            comm.CommandType = CommandType.Text;
+            comm.Connection = Conectar.obterConexao();
+
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+            DR.Read();
+
+            lstPesquisar.Items.Add(DR.GetString(0));
+
+            Conectar.fecharConexao();
+
+        }//pesquisar por código
+        public void pesquisarNome(string nome)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select nome from tbFuncionarios where nome like '%" + nome + "%';";
+            comm.CommandType = CommandType.Text;
+            comm.Connection = Conectar.obterConexao();
+
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+            DR.Read();
+
+            lstPesquisar.Items.Add(DR.GetString(0));
+
+            Conectar.fecharConexao();
+
         }
     }
 }
