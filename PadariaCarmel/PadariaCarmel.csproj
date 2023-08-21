@@ -112,6 +112,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="frmCadastrarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarUsuarios.Designer.cs">
+      <DependentUpon>frmCadastrarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCalcula.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCadastrarUsuarios.resx">
+      <DependentUpon>frmCadastrarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCalcula.resx">
       <DependentUpon>frmCalcula.cs</DependentUpon>
     </EmbeddedResource>
