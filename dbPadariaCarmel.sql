@@ -4,6 +4,7 @@ drop database dbPadariaCarmel;
 create database dbPadariaCarmel;
 -- acessando banco de dados
 use dbPadariaCarmel;
+
 -- criando as tabelas
 create table tbFuncionarios(
 codFunc int not null auto_increment,
@@ -20,6 +21,21 @@ cep char(9),
 primary key(codFunc)
 );
 
+create table tbClientes(
+codCli int not null auto_increment,
+nome varchar(100) not null,
+email varchar(100),
+telCel char(10),
+primary key(codCli)
+);
+
+create table tbFornecedores(
+codForn int not null auto_increment,
+nome varchar(100) not null,
+email varchar(100),
+cnpj char(18) not null unique,
+primary key(codForn));
+
 create table tbUsuarios(
 codUsu int not null auto_increment,
 nome varchar(50) not null,
@@ -29,16 +45,36 @@ primary key(codUsu),
 foreign key(codFunc) references tbFuncionarios(codFunc)
 );
 
+-- insert into tbUsuarios(nome,senha,codFunc)values(@nome,@senha,@codFunc);
 
-insert into tbFuncionarios
-	(nome,email,telCel,cpf,
-		endereco,numero,bairro,cidade,estado,cep)
-	values('Senac Largo Treze','sac@sp.senac.br',
-		'(11) 95824-7859','258.365.952-88',
-		'Rua Dr. Antônio Bento','355','Santo Amaro',
-		'São Paulo','SP','04750-000');
-insert into tbUsuarios(nome,senha,codFunc)
-	values('senac','senac',1);
+create table tbProdutos(
+codProd int not null auto_increment,
+descricao varchar(100),
+dataEntrada date,
+horaEntrada time,
+quantidade decimal(9,2),
+valorUnit decimal(9,2),
+codForn int not null,
+primary key(codProd),
+foreign key(codForn) references tbFornecedores(codForn));
+
+create table tbVendas(
+codVenda int not null auto_increment,
+codUsu int not null,
+codCli int not null,
+codProd int not null,
+dataVenda date,
+quantidade decimal(9,2),
+valorTotal decimal(9,2),
+primary key(codVenda),
+foreign key(codUsu) references tbUsuarios(codUsu),
+foreign key(codCli) references tbClientes(codCli),
+foreign key(codProd) references tbProdutos(codProd));
+
+
+
+insert into tbFuncionarios	(nome,email,telCel,cpf,	endereco,numero,bairro,cidade,estado,cep)values('Senac Largo Treze','sac@sp.senac.br','(11) 95824-7859','258.365.952-88','Rua Dr. Antônio Bento','355','Santo Amaro','São Paulo','SP','04750-000');
+insert into tbUsuarios(nome,senha,codFunc) values('senac','senac',1);
 
 	
 
