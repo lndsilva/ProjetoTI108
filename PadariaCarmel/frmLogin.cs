@@ -89,23 +89,30 @@ namespace PadariaCarmel
         //buscar usuario e senha se exite no banco de dados
         public bool acessoSistema(string nome, string senha)
         {
-            MySqlCommand comm = new MySqlCommand();
+            
+                MySqlCommand comm = new MySqlCommand();
             comm.CommandText = "select * from tbUsuarios where nome = @nome and senha = @senha;";
             comm.CommandType = CommandType.Text;
 
             comm.Parameters.Clear();
             comm.Parameters.Add("@nome", MySqlDbType.VarChar, 50).Value = nome; 
             comm.Parameters.Add("@senha", MySqlDbType.VarChar, 14).Value = senha;
-
-            comm.Connection = Conectar.obterConexao();
+            
+                comm.Connection = Conectar.obterConexao();
             MySqlDataReader DR;
-            DR = comm.ExecuteReader();
+           
+                DR = comm.ExecuteReader();
 
-            bool resultado = DR.HasRows;
+                bool resultado = DR.HasRows;
 
-            Conectar.fecharConexao();
+                Conectar.fecharConexao();
+                
+                return resultado;
 
-            return resultado;
+            
+          
+
+
         }
 
     }

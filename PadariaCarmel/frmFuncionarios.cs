@@ -76,7 +76,7 @@ namespace PadariaCarmel
             btnExcluir.Enabled = false;
             btnLimpar.Enabled = false;
         }
-        //desabilitar campos
+        //habilitar campos
         public void habilitarCamposBuscaNome()
         {
             txtCodigo.Enabled = false;
